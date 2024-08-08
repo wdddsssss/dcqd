@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	
+<title>待产清单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <style type="text/css">
+        p {
+            font-size: 3vw;
+			text-align: left;
+            padding-left: -2em;
+        }
+        p:first-letter {
+            margin-left: 2em;
+        }
+		h1{
+			font-size: 5vw;
+			text-align: center; 
+		}
+		h2{
+			font-size: 4vw;
+			text-align: left; 
+		}
+		h3{
+			font-size: 3vw;
+			text-align: center; 
+		}
+		div{
+			margin:0 auto;
+			width: 85%;
+			padding: 10px;
+			
+		}
+    </style>
+	
+</head>
+
+<body>
+	
+	<p id="dateTxt"></p>
+	<h1>待产清单</h1>
+    <div>
+		
+
+<h2>亲爱的孕妈们：</h2>
+
+<p>大家好，为了保证生产时的顺利，请各位孕妈在怀孕32周后就要准备好以下物资。</p>
+
+<p>1、入院时请提供夫妻双方身份证原件及复印件（身份证的正面与反面复印在同一张A4纸上，夫妻各自复印两份）。准备好身份证复印件请钉在产检手册最后一页和产检资料每次到医院都带上。</p>
+
+<p>2、待产物品准备：新生儿换洗衣服3-5套、包被2-3张和纸尿裤2包、湿巾1包、纸巾2包、喂水用的小碗小勺、成人纸尿裤2包、护理垫2包、胎监带2条，面盆2个、口盅牙刷等个人日常用品。</p>
+
+<p>3、顺产进产房物品准备：成人纸尿裤1包、护理垫1包、胎监带2条、吸氧管1条（办理住院后医院统一发）、水杯、纸巾，新生儿衣服1套、包被1张和婴儿纸尿裤2张、面盆1个。</p>
+
+<p>4、剖宫产术前用物准备：成人纸尿裤3张、护理垫3张，新生儿衣服1套、包被1张和新生儿纸尿裤2张。</p>
+
+<p>5、办理出院时请您准备好入院押金单及医生开的出院小结、诊断证明，在病房等待护士通知后到住院部一楼办出院手续。谢谢合作！</p>
+
+	</div>
+</body>
+</html>
+
+<script>
+    "use strict";
+    const week = ['天', '一', '二', '三', '四', '五', '六'],
+        dom = document.getElementById("dateTxt"),
+        checkTime = i => (i < 10) ? `0${i}` : i; // 在小于10的数字前加一个‘0’
+    let today;
+    
+    function startTime() {
+        today = new Date();
+        dom.innerHTML = `星期${week[today.getDay()]} ：${checkTime(today.getHours())}:${checkTime(today.getMinutes())}:${checkTime(today.getSeconds())}`;
+    }
+    setInterval(startTime, 500); //循环计时
+</script>
+
